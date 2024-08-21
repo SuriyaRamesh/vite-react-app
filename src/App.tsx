@@ -3,6 +3,8 @@ import Alert from "./components/Alert";
 import Button from "./components/Button/Button";
 import { useState } from "react";
 import Like from "./components/Like";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
 
 
 const handleSelectItem = (item: string) => console.log(item);
@@ -18,6 +20,8 @@ function App() {
      {showAlert && <Alert OnClose={() => setShowAlert(false)}><h3>There is an Error!!!</h3></Alert>}
      <Button OnClickHandle={() => setShowAlert(true)} >My Button</Button>
      <Like onClick={() => console.log('Clicked!!')} />
+      <Navbar cartItemsCount={cartItems.length} />
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
     </div>
   )
 }
