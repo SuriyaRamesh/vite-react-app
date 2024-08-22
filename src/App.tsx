@@ -5,6 +5,9 @@ import { useState } from "react";
 import Like from "./components/Like";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
+import UpdateGameState from "./components/UpdateGameState";
+import AddTopping from "./components/AddTopping";
+import ShoppingCartUpdate from "./components/ShoppingCartUpdate";
 
 
 const handleSelectItem = (item: string) => console.log(item);
@@ -22,6 +25,9 @@ function App() {
      <Like onClick={() => console.log('Clicked!!')} />
       <Navbar cartItemsCount={cartItems.length} />
       <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+      <UpdateGameState />
+      <AddTopping />
+      <ShoppingCartUpdate />
     </div>
   )
 }
