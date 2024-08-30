@@ -1,6 +1,6 @@
 import React, { FormEvent, useRef } from 'react'
 
-const Form = () => {
+const FormRefHook = () => {
 
   const nameRef = useRef<HTMLInputElement>(null);
   const ageRef = useRef<HTMLInputElement>(null);
@@ -26,4 +26,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default FormRefHook
